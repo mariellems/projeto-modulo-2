@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-8">
+            <h2 class="title">{{vm.title}}</h2>
+            <form>
+                <ui-input ng-model="vm.record.nome" label="Nome"></ui-input>
+                <ui-input ng-model="vm.record.telefone" type="telefone" label="Telefone"></ui-input>
+                <ui-input ng-model="vm.record.data" type="date" label="Data"></ui-input>
+                <ui-input ng-model="vm.record.servico" label="Serviço"></ui-input>
+                <ui-input ng-model="vm.record.produto" label="Produto"></ui-input>                
+                <ui-input ng-model="vm.record.valorTotal" label="Valor total"></ui-input>
+                <ui-input ng-model="vm.record.opcao" label="Cliente Pagou"></ui-input>
+                <button ng-click="vm.save()" type="button" class="btn btn-primary btn-lg">Salvar Registro</button>
+                <a ui-sref="app.atendimento.list" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+

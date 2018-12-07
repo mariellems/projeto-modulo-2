@@ -1,0 +1,117 @@
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  color: #EEAEEE;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 #EEAEEE;
+}
+
+.sidebar-sticky {
+  position: fixed;
+  color: #EEAEEE;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    color:#EEAEEE;
+
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #333;
+}
+
+.sidebar .nav-link.active {
+  color: #333;
+}
+
+.sidebar .nav-link:hover {
+  background: #EEAEEE;
+}
+
+.sidebar-heading {
+  background: 	rgb(0, 0, 0);
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+  padding-top: 48px; /* Space for fixed navbar */
+}
+
+/*
+ * Navbar
+ */
+
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  color: #FFC1C1;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  background: 	#ffffff;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.navbar .bg-dark {
+  padding: .75rem 1rem;
+  background: 	#ffffff;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background: 	#ffffff;
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px #FFC1C1;
+}
+
+/*
+ * Utilities
+ */
+
+.border-top { border-top: 1px solid #FFC1C1; }
+.border-bottom { border-bottom: 1px solid #FFC1C1; }

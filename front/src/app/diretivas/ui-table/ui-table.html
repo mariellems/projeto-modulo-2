@@ -1,0 +1,16 @@
+<table class="table table-striped">
+        <thead>
+            <tr>
+                <th ng-repeat="$col in $ctrl.cols" scope="col">{{$col.label}}</th>
+                <th ng-if="$ctrl.showActions" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="$rec in $ctrl.data">
+                <td ng-repeat="$col in $ctrl.cols">{{$rec[$col.value]}}</td>
+                <td ng-if="$ctrl.showActions" ng-transclude="actions" style="text-align: right">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    

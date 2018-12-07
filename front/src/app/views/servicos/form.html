@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-8">
+            <h2 class="title">{{vm.title}}</h2>
+            <form>
+                <ui-input 
+                   msg-class="muted" 
+                   msg="Digite uma descrição válida"
+                   ng-model="vm.record.descricaoServico"
+                   label="Descrição">
+                </ui-input>
+                <ui-input ng-model="vm.record.preco" type="preco" label="Preço"></ui-input>
+                <button ng-click="vm.save()" type="button" class="btn btn-primary btn-lg">Salvar Registro</button>
+                <a ui-sref="app.servicos.list" class="btn btn-danger">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
