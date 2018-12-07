@@ -23,7 +23,7 @@ public class Produto implements Entidade {
     private Long id;
    
     @Column(name = "DESCRICAO", length = 250)
-     String descricao;
+    private String descricao;
     
     @Column(name = "PRECO", precision = 15, scale = 5)
     private BigDecimal preco;

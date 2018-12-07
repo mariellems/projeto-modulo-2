@@ -43,17 +43,17 @@ public class Atendimento implements Entidade {
     @Temporal(TemporalType.DATE)
     private Date data;
     
-    @JoinColumn(name = "ID_SERVICO")
-    private Servico servico;
+    @Column(name = "SERVICO", length = 50)
+    private String servico;
    
-    @JoinColumn(name = "ID_PRODUTO")
-    private Produto produto;
+    @Column(name = "PRODUTO", length = 50)
+    private String produto;
         
     @Digits(integer = 10, fraction = 5)
     @Column(name = "VL_TOTAL", precision = 15, scale = 5)
     private BigDecimal valorTotal;
     
-    @Column(name = "opcao")
+    @Column(name = "opcao", length = 20)
     private String opcao;
     
     @Override
@@ -89,19 +89,19 @@ public class Atendimento implements Entidade {
         this.data = data;
     }
 
-    public Servico getServico() {
+    public String getServico() {
         return servico;
     }
 
-    public void setServico(Servico servico) {
+    public void setServico(String servico) {
         this.servico = servico;
     }
 
-     public Produto getProduto() {
+     public String getProduto() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(String produto) {
         this.produto = produto;
     }
     
